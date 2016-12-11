@@ -1,0 +1,13 @@
+{{#bg-select onChangeHandler=(action 'onChangeHandler') selected="3" as |bg|}}
+  {{#bg.option value="1"}}alma 2{{/bg.option}}
+  {{#bg.option value="2"}}korte 2{{/bg.option}}
+  {{#bg.option value="3"}}szilva 2{{/bg.option}}
+  {{#bg.option value="4"}}
+  dinnye
+  2
+  {{/bg.option}}
+{{/bg-select}}
+
+<div class="result">
+  {{result}}
+</div>
