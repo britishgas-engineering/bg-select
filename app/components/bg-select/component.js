@@ -1,1 +1,1 @@
-export { default } from 'british-gas-select/components/bg-select/component';
+export { default } from 'bg-select/components/bg-select/component';

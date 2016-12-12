@@ -1,4 +1,4 @@
-# British-gas-select
+# BG select
 
 This README outlines the details of collaborating on this Ember addon.
 

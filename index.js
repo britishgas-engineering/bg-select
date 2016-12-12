@@ -2,5 +2,5 @@
 'use strict';
 
 module.exports = {
-  name: 'british-gas-select'
+  name: 'bg-select'
 };
