@@ -4,6 +4,7 @@ import layout from './template';
 export default Ember.Component.extend({
   tagName: 'select',
   selectedOptionId: null,
+  attributeBindings: ['disabled'],
   init() {
     this._super();
     this.set('_options', {});
