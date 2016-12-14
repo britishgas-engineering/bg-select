@@ -353,11 +353,11 @@ define("dummy/templates/components/dummy-component", ["exports"], function (expo
             "loc": {
               "source": null,
               "start": {
-                "line": 38,
+                "line": 39,
                 "column": 4
               },
               "end": {
-                "line": 38,
+                "line": 39,
                 "column": 37
               }
             },
@@ -389,12 +389,12 @@ define("dummy/templates/components/dummy-component", ["exports"], function (expo
               "loc": {
                 "source": null,
                 "start": {
-                  "line": 40,
-                  "column": 6
+                  "line": 41,
+                  "column": 4
                 },
                 "end": {
-                  "line": 40,
-                  "column": 41
+                  "line": 41,
+                  "column": 39
                 }
               },
               "moduleName": "dummy/templates/components/dummy-component.hbs"
@@ -416,7 +416,7 @@ define("dummy/templates/components/dummy-component", ["exports"], function (expo
               dom.insertBoundary(fragment, null);
               return morphs;
             },
-            statements: [["content", "el.label", ["loc", [null, [40, 29], [40, 41]]], 0, 0, 0, 0]],
+            statements: [["content", "el.label", ["loc", [null, [41, 27], [41, 39]]], 0, 0, 0, 0]],
             locals: [],
             templates: []
           };
@@ -427,11 +427,11 @@ define("dummy/templates/components/dummy-component", ["exports"], function (expo
             "loc": {
               "source": null,
               "start": {
-                "line": 39,
+                "line": 40,
                 "column": 4
               },
               "end": {
-                "line": 41,
+                "line": 42,
                 "column": 4
               }
             },
@@ -443,7 +443,7 @@ define("dummy/templates/components/dummy-component", ["exports"], function (expo
           hasRendered: false,
           buildFragment: function buildFragment(dom) {
             var el0 = dom.createDocumentFragment();
-            var el1 = dom.createTextNode("      ");
+            var el1 = dom.createTextNode("    ");
             dom.appendChild(el0, el1);
             var el1 = dom.createComment("");
             dom.appendChild(el0, el1);
@@ -456,7 +456,7 @@ define("dummy/templates/components/dummy-component", ["exports"], function (expo
             morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
             return morphs;
           },
-          statements: [["block", "bg.option", [], ["value", ["subexpr", "@mut", [["get", "el", ["loc", [null, [40, 25], [40, 27]]], 0, 0, 0, 0]], [], [], 0, 0]], 0, null, ["loc", [null, [40, 6], [40, 55]]]]],
+          statements: [["block", "bg.option", [], ["value", ["subexpr", "@mut", [["get", "el", ["loc", [null, [41, 23], [41, 25]]], 0, 0, 0, 0]], [], [], 0, 0]], 0, null, ["loc", [null, [41, 4], [41, 53]]]]],
           locals: ["el"],
           templates: [child0]
         };
@@ -467,12 +467,12 @@ define("dummy/templates/components/dummy-component", ["exports"], function (expo
           "loc": {
             "source": null,
             "start": {
-              "line": 37,
-              "column": 2
+              "line": 38,
+              "column": 4
             },
             "end": {
-              "line": 42,
-              "column": 2
+              "line": 43,
+              "column": 4
             }
           },
           "moduleName": "dummy/templates/components/dummy-component.hbs"
@@ -500,7 +500,7 @@ define("dummy/templates/components/dummy-component", ["exports"], function (expo
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [["block", "bg.option", [], ["value", ""], 0, null, ["loc", [null, [38, 4], [38, 51]]]], ["block", "each", [["get", "model.array1", ["loc", [null, [39, 12], [39, 24]]], 0, 0, 0, 0]], [], 1, null, ["loc", [null, [39, 4], [41, 13]]]]],
+        statements: [["block", "bg.option", [], ["value", ""], 0, null, ["loc", [null, [39, 4], [39, 51]]]], ["block", "each", [["get", "model.array1", ["loc", [null, [40, 12], [40, 24]]], 0, 0, 0, 0]], [], 1, null, ["loc", [null, [40, 4], [42, 13]]]]],
         locals: ["bg"],
         templates: [child0, child1]
       };
@@ -515,7 +515,7 @@ define("dummy/templates/components/dummy-component", ["exports"], function (expo
             "column": 0
           },
           "end": {
-            "line": 49,
+            "line": 51,
             "column": 0
           }
         },
@@ -570,9 +570,30 @@ define("dummy/templates/components/dummy-component", ["exports"], function (expo
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
         var el1 = dom.createElement("div");
-        var el2 = dom.createTextNode("\n");
+        dom.setAttribute(el1, "class", "row");
+        var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
-        var el2 = dom.createComment("");
+        var el2 = dom.createElement("div");
+        dom.setAttribute(el2, "class", "col-xs-3");
+        var el3 = dom.createTextNode("\n");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createTextNode("  ");
+        dom.appendChild(el2, el3);
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createElement("div");
+        dom.setAttribute(el2, "class", "col-xs-3");
+        var el3 = dom.createTextNode("\n      Result:\n      ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createTextNode("\n  ");
+        dom.appendChild(el2, el3);
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n");
         dom.appendChild(el1, el2);
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
@@ -581,26 +602,16 @@ define("dummy/templates/components/dummy-component", ["exports"], function (expo
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
-        var el1 = dom.createElement("div");
-        dom.setAttribute(el1, "class", "result");
-        var el2 = dom.createTextNode("\n  Result:\n  ");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createComment("");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n");
-        dom.appendChild(el1, el2);
-        dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("\n");
-        dom.appendChild(el0, el1);
         return el0;
       },
       buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+        var element0 = dom.childAt(fragment, [2]);
         var morphs = new Array(2);
-        morphs[0] = dom.createMorphAt(dom.childAt(fragment, [2]), 1, 1);
-        morphs[1] = dom.createMorphAt(dom.childAt(fragment, [6]), 1, 1);
+        morphs[0] = dom.createMorphAt(dom.childAt(element0, [1]), 1, 1);
+        morphs[1] = dom.createMorphAt(dom.childAt(element0, [3]), 1, 1);
         return morphs;
       },
-      statements: [["block", "bg-select", [], ["onSelectChange", ["subexpr", "action", ["onChangeHandler"], [], ["loc", [null, [37, 30], [37, 56]]], 0, 0], "selected", ["subexpr", "@mut", [["get", "model.defaultValue", ["loc", [null, [37, 66], [37, 84]]], 0, 0, 0, 0]], [], [], 0, 0]], 0, null, ["loc", [null, [37, 2], [42, 16]]]], ["content", "result", ["loc", [null, [47, 2], [47, 12]]], 0, 0, 0, 0]],
+      statements: [["block", "bg-select", [], ["class", "form-control", "onSelectChange", ["subexpr", "action", ["onChangeHandler"], [], ["loc", [null, [38, 53], [38, 79]]], 0, 0], "selected", ["subexpr", "@mut", [["get", "model.defaultValue", ["loc", [null, [38, 89], [38, 107]]], 0, 0, 0, 0]], [], [], 0, 0]], 0, null, ["loc", [null, [38, 4], [43, 18]]]], ["content", "result", ["loc", [null, [47, 6], [47, 16]]], 0, 0, 0, 0]],
       locals: [],
       templates: [child0]
     };
