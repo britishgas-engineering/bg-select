@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/britishgas-engineering/bg-select.svg?branch=master)](https://travis-ci.org/britishgas-engineering/bg-select)
+
 # BG select
 
 BG select is a simple and effective implementation of html select. However there are other open source ember-cli selects we decided to build our version after struggling with memory leaks and not proper event handlings.
@@ -6,7 +8,7 @@ This `select` component does not support multiple options since it is not in our
 
 This component handles strings, numbers, arrays, objects as values (even Ember.Objects).
 
-## Implementation 
+## Implementation
 
 Given a route.model:
 
