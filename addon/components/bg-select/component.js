@@ -20,7 +20,7 @@ export default Ember.Component.extend({
   change() {
     let id = this.$('option:selected').attr('id');
     let value = this.get(`_options.${id}`);
-    return this.attrs.onChangeHandler && this.attrs.onChangeHandler(value);
+    return this.attrs.onSelectChange && this.attrs.onSelectChange(value);
   },
   layout,
   actions: {

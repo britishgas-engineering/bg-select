@@ -1,13 +1,48 @@
-{{#bg-select onChangeHandler=(action 'onChangeHandler') selected="3" as |bg|}}
-  {{#bg.option value="1"}}alma 2{{/bg.option}}
-  {{#bg.option value="2"}}korte 2{{/bg.option}}
-  {{#bg.option value="3"}}szilva 2{{/bg.option}}
-  {{#bg.option value="4"}}
-  dinnye
-  2
-  {{/bg.option}}
-{{/bg-select}}
+<div>
+  <h1>Example 1 working with objects</h1>
+  <p>
+    In this example the seed is:
+  </p>
 
+  <pre>
+    model = {
+      array1 = [{
+        id: 1,
+        label: 'yellow'
+      }, {
+        id: 2,
+        label: 'green'
+      }, {
+        id: 12,
+        label: 'red'
+      }],
+      // just to make a twist it is Ember.Object
+      defaultValue: Ember.Object.create({id: 12, label: 'red'})
+    }
+  </pre>
+
+  <div>
+    <h3>Handlebar (FYI: the value is the object)</h3>
+  </div>
+  <pre>
+    &#123;&#123;#bg-select selected=model.defaultValue as |bg|}}
+      &#123;&#123;#bg.option value=""}}Select one&#123;&#123;/bg.option}}
+      &#123;&#123;#each model.array1 as |obj|}}
+        &#123;&#123;#bg.option value=obj}}&#123;&#123;obj.label}}&#123;&#123;/bg.option}}
+      &#123;&#123;/each}}
+    &#123;&#123;/bg-select}}
+  </pre>
+</div>
+<div>
+  {{#bg-select onSelectChange=(action 'onChangeHandler') selected=model.defaultValue as |bg|}}
+    {{#bg.option value=""}}Select one{{/bg.option}}
+    {{#each model.array1 as |el|}}
+      {{#bg.option value=el}}{{el.label}}{{/bg.option}}
+    {{/each}}
+  {{/bg-select}}
+</div>
+<hr />
 <div class="result">
+  Result:
   {{result}}
 </div>

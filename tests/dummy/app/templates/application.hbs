@@ -1,12 +1,4 @@
-{{#bg-select sselected=model.defaultValue as |bg|}}
-  {{#each model.array1 as |el|}}
-    {{#bg.option value=el}}{{el.a}}{{/bg.option}}
-  {{/each}}
-  {{#bg.option value="1"}}alma {{/bg.option}}
-  {{#bg.option value="2"}}korte{{/bg.option}}
-  {{#bg.option value="3"}}szilva{{/bg.option}}
-  {{#bg.option value="4"}}
-  dinnye
-  {{/bg.option}}
-{{/bg-select}}
-{{dummy-component}}
+
+<div class="container">
+  {{dummy-component model=model}}
+</div>
