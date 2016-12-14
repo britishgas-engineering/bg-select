@@ -7,9 +7,9 @@ test('visiting /', function (assert) {
   visit('/');
 
   andThen(function () {
-    fillIn('.dummy select', 'dinnye 2');
+    fillIn('.dummy select', 'yellow');
     andThen(() => {
-      assert.equal(find('.result').text().trim(), '4');
+      assert.equal(find('.dummy .result').text().trim(), "{\"id\":1,\"label\":\"yellow\"}");
     });
   });
 });

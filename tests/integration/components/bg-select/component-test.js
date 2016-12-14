@@ -111,7 +111,7 @@ test('selecting 2nd element using strings', function (assert) {
   });
 
   this.render(hbs`
-    {{#bg-select onChangeHandler=(action 'onChangeHandler') as |bg|}}
+    {{#bg-select onSelectChange=(action 'onChangeHandler') as |bg|}}
       {{#bg.option value="1"}}label 1{{/bg.option}}
       {{#bg.option value="2"}}label 2{{/bg.option}}
       {{#bg.option value="3"}}label 3{{/bg.option}}
@@ -142,7 +142,7 @@ test('selecting 2nd element using POJOs', function (assert) {
   this.set('values', values);
 
   this.render(hbs`
-    {{#bg-select onChangeHandler=(action 'onChangeHandler') as |bg|}}
+    {{#bg-select onSelectChange=(action 'onChangeHandler') as |bg|}}
       {{#bg.option value=values.[0]}}{{values.[0].label}}{{/bg.option}}
       {{#bg.option value=values.[1]}}{{values.[1].label}}{{/bg.option}}
       {{#bg.option value=values.[2]}}{{values.[2].label}}{{/bg.option}}
@@ -174,7 +174,7 @@ test('selecting 2nd element using Ember Object', function (assert) {
   this.set('values', values);
 
   this.render(hbs`
-    {{#bg-select onChangeHandler=(action 'onChangeHandler') as |bg|}}
+    {{#bg-select onSelectChange=(action 'onChangeHandler') as |bg|}}
       {{#bg.option value=values.[0]}}{{values.[0].label}}{{/bg.option}}
       {{#bg.option value=values.[1]}}{{values.[1].label}}{{/bg.option}}
       {{#bg.option value=values.[2]}}{{values.[2].label}}{{/bg.option}}
