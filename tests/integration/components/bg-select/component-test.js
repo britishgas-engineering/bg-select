@@ -98,7 +98,6 @@ test('default value when using Ember.Object', function (assert) {
     {{/bg-select}}
   `);
 
-  // assert.ok(true, this.$('select:'))
   assert.equal(this.$('option:selected').index(), 2, 'should select the required 3rd element');
 });
 
