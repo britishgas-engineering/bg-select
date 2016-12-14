@@ -8,7 +8,7 @@ export default Ember.Component.extend({
   init() {
     this._super();
     this.set('_options', {});
-    Ember.run.scheduleOnce('actions', this, () => {
+    Ember.run.scheduleOnce('afterRender', this, () => {
       let stringified = JSON.stringify(this.get('selected'));
       let match = Object.keys(this.get('_options'))
         .filter((key) => {
