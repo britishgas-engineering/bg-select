@@ -42,7 +42,7 @@ and the hbs:
 
 To catch the selected value use `onSelectChange` action.
 
-For working example please check the github io page
+For working example please check the [github io page](https://britishgas-engineering.github.io/bg-select/) 
 
 ## Installation
 
