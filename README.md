@@ -40,8 +40,9 @@ and the hbs:
 
 ```
 
-For working example please check the github io page
+To catch the selected value use `onSelectChange` action.
 
+For working example please check the github io page
 
 ## Installation
 
