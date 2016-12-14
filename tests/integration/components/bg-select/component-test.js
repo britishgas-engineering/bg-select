@@ -92,12 +92,13 @@ test('default value when using Ember.Object', function (assert) {
 
   this.render(hbs`
     {{#bg-select selected=selected as |bg|}}
-      {{#bg.option value=values.[0]}}{{values.[0].label}}{{/bg.option}}
-      {{#bg.option value=values.[1]}}{{values.[1].label}}{{/bg.option}}
-      {{#bg.option value=values.[2]}}{{values.[2].label}}{{/bg.option}}
+      {{#each values as |value|}}
+        {{#bg.option value=value}}{{values.label}}{{/bg.option}}
+      {{/each}}
     {{/bg-select}}
   `);
 
+  // assert.ok(true, this.$('select:'))
   assert.equal(this.$('option:selected').index(), 2, 'should select the required 3rd element');
 });
 
