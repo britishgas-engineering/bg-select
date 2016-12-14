@@ -638,7 +638,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("dummy/app")["default"].create({"name":"bg-select","version":"0.0.1+671682d7"});
+  require("dummy/app")["default"].create({"name":"bg-select","version":"0.0.1+8b3687f2"});
 }
 
 /* jshint ignore:end */
