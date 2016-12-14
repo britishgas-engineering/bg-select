@@ -46,9 +46,7 @@ For working example please check the [github io page](https://britishgas-enginee
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+* `ember install bg-select`
 
 ## Running
 
