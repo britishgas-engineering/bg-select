@@ -186,7 +186,7 @@ test('selecting 2nd element using Ember Object', function (assert) {
 });
 
 
-test('changing "selected" value outside', function (assert) {
+test('changing "selected" value from outside', function (assert) {
   let values = [{
     label: 'label 1',
     aProp: 'abc'
