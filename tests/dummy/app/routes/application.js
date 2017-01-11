@@ -13,7 +13,7 @@ export default Ember.Route.extend({
         id: 12,
         label: 'red'
       })],
-      defaultValue: Ember.Object.create({id: 12, label: 'red'})
+      defaultValue: Ember.Object.create({id: 2, label: 'green'})
     };
   }
 });

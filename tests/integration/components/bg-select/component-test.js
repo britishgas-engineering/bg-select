@@ -104,7 +104,7 @@ test('default value when using Ember.Object', function (assert) {
 // interacting with the component
 test('selecting 2nd element using strings', function (assert) {
 
-  expect(1);
+  assert.expect(1);
 
   this.on('onChangeHandler', (selectedValue) => {
     assert.equal(selectedValue, 2, 'should return 2nd element value');
@@ -134,7 +134,7 @@ test('selecting 2nd element using POJOs', function (assert) {
     aProp: 'abcde'
   }];
 
-  expect(1);
+  assert.expect(1);
   this.on('onChangeHandler', (selectedValue) => {
     assert.deepEqual(selectedValue, values[1]);
   });
@@ -166,7 +166,7 @@ test('selecting 2nd element using Ember Object', function (assert) {
     aProp: 'abcde'
   })];
 
-  expect(1);
+  assert.expect(1);
   this.on('onChangeHandler', (selectedValue) => {
     assert.deepEqual(selectedValue, values[1]);
   });

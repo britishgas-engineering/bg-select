@@ -5,9 +5,9 @@ moduleForComponent('bg-option', 'Integration | Component | bg select/bg option',
   integration: true
 });
 
-test('didInsertElement hook', function(assert) {
+test('didInsertElement hook', function (assert) {
   let moackValue = 'apple';
-  expect(3);
+  assert.expect(3);
 
   this.on('onRegisterHandler', (id, value) => {
     assert.equal(value, moackValue, 'should send the value of option');
