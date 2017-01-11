@@ -1,6 +1,5 @@
 {
   "predef": [
-    "expect",
     "document",
     "window",
     "location",

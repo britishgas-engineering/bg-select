@@ -4,7 +4,7 @@ import layout from './template';
 export default Ember.Component.extend({
   attributeBindings: ['selected'],
   selected: Ember.computed('selectedOptionId', function () {
-    return this.get('selectedOptionId') === this.elementId ? 'selected' : '';
+    return this.get('selectedOptionId') === this.elementId;
   }),
   layout,
   tagName: 'option',
