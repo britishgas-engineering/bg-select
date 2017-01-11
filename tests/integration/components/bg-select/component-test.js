@@ -184,3 +184,35 @@ test('selecting 2nd element using Ember Object', function (assert) {
   this.$('select').val('label 2').trigger('change');
 
 });
+
+
+test('changing "selected" value outside', function (assert) {
+  let values = [{
+    label: 'label 1',
+    aProp: 'abc'
+  }, {
+    label: 'label 2',
+    aProp: 'abcd'
+  }, {
+    label: 'label 3',
+    aProp: 'abcde'
+  }];
+  this.set('values', values);
+
+  this.set('selected', values[1]);
+
+  this.render(hbs`
+    {{#bg-select selected=selected as |bg|}}
+      {{#bg.option value=values.[0]}}{{values.[0].label}}{{/bg.option}}
+      {{#bg.option value=values.[1]}}{{values.[1].label}}{{/bg.option}}
+      {{#bg.option value=values.[2]}}{{values.[2].label}}{{/bg.option}}
+    {{/bg-select}}
+  `);
+
+  assert.equal(this.$('option:selected').index(), 1, 'should select the required 2nd element');
+
+  this.set('selected', values[2]);
+
+  assert.equal(this.$('option:selected').index(), 2, 'should select the required 3nd element');
+
+});
