@@ -26,7 +26,7 @@
   </div>
   <pre>
     &#123;&#123;#bg-select selected=model.defaultValue as |bg|}}
-      &#123;&#123;#bg.option value=""}}Select one&#123;&#123;/bg.option}}
+      &#123;&#123;#bg.option data-noSelect="true" value=""}}Select one&#123;&#123;/bg.option}}
       &#123;&#123;#each model.array1 as |obj|}}
         &#123;&#123;#bg.option value=obj}}&#123;&#123;obj.label}}&#123;&#123;/bg.option}}
       &#123;&#123;/each}}
