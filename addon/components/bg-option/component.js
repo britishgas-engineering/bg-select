@@ -2,7 +2,7 @@ import Ember from 'ember';
 import layout from './template';
 
 export default Ember.Component.extend({
-  attributeBindings: ['selected'],
+  attributeBindings: ['selected', 'data-noSelect'],
   selected: Ember.computed('selectedOptionId', function () {
     return this.get('selectedOptionId') === this.elementId;
   }),

@@ -36,7 +36,7 @@
 <div class="row">
   <div class="col-xs-3">
     {{#bg-select class="form-control" onSelectChange=(action 'onChangeHandler') selected=model.defaultValue as |bg|}}
-    {{#bg.option value=""}}Select one{{/bg.option}}
+    {{#bg.option value="" data-noSelect="true"}}Select one{{/bg.option}}
     {{#each model.array1 as |el|}}
     {{#bg.option value=el}}{{el.label}}{{/bg.option}}
     {{/each}}
