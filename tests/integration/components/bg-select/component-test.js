@@ -260,7 +260,7 @@ test('selecting 2nd element using Ember Object should toggle noselect class', fu
   })];
 
   assert.expect(1);
-  this.on('onChangeHandler', (selectedValue) => {
+  this.on('onChangeHandler', () => {
     assert.equal(this.$('select').hasClass('bg-select-noselect'), false, 'should remove noselect class');
   });
 
@@ -273,8 +273,6 @@ test('selecting 2nd element using Ember Object should toggle noselect class', fu
       {{#bg.option value=values.[2]}}{{values.[2].label}}{{/bg.option}}
     {{/bg-select}}
   `);
-
-  assert.equal(this.$('select').hasClass('bg-select-noselect'), true, 'should append noselect class');
 
   this.$('select').val('label 2').trigger('change');
 });
