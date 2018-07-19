@@ -26,7 +26,7 @@
   </div>
   <pre>
     &#123;&#123;#bg-select selected=model.defaultValue as |bg|}}
-      &#123;&#123;#bg.option value=""}}Select one&#123;&#123;/bg.option}}
+      &#123;&#123;#bg.option data-noSelect="true" value=""}}Select one&#123;&#123;/bg.option}}
       &#123;&#123;#each model.array1 as |obj|}}
         &#123;&#123;#bg.option value=obj}}&#123;&#123;obj.label}}&#123;&#123;/bg.option}}
       &#123;&#123;/each}}
@@ -36,7 +36,7 @@
 <div class="row">
   <div class="col-xs-3">
     {{#bg-select class="form-control" onSelectChange=(action 'onChangeHandler') selected=model.defaultValue as |bg|}}
-    {{#bg.option value=""}}Select one{{/bg.option}}
+    {{#bg.option value="" data-noSelect="true"}}Select one{{/bg.option}}
     {{#each model.array1 as |el|}}
     {{#bg.option value=el}}{{el.label}}{{/bg.option}}
     {{/each}}

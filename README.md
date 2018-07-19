@@ -32,7 +32,7 @@ and the hbs:
 
 ```hbs
   {{#bg-select onSelectChange=(action 'onChangeHandler') selected=model.defaultValue as |bg|}}
-    {{#bg.option value=""}}Select one{{/bg.option}}
+    {{#bg.option data-noSelect="true" value=""}}Select one{{/bg.option}}
     {{#each model.array1 as |el|}}
       {{#bg.option value=el}}{{el.label}}{{/bg.option}}
     {{/each}}
