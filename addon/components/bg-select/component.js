@@ -1,10 +1,11 @@
-import Ember from 'ember';
+import Component from '@ember/component';
 import layout from './template';
 
-export default Ember.Component.extend({
+export default Component.extend({
   tagName: 'select',
   selectedOptionId: null,
-  attributeBindings: ['disabled'],
+  attributeBindings: ['disabled', 'tabindex'],
+  tabindex: null,
   init() {
     this._super();
     this.set('_options', {});
@@ -28,7 +29,8 @@ export default Ember.Component.extend({
   change() {
     let id = this.$('option:selected').attr('id');
     let value = this.get(`_options.${id}`);
-    return this.attrs.onSelectChange && this.attrs.onSelectChange(value);
+    const action = this.get('onSelectChange');
+    return action && action(value);
   },
   layout,
   actions: {

@@ -1,6 +1,5 @@
-import Ember from 'ember';
-
-export default Ember.Component.extend({
+import Component from '@ember/component';
+export default Component.extend({
   classNames: ['dummy'],
   init() {
     this._super(...arguments);
