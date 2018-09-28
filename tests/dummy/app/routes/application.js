@@ -1,19 +1,21 @@
-import Ember from 'ember';
+import Route from '@ember/routing/route';
 
-export default Ember.Route.extend({
+import EmberObject from '@ember/object';
+
+export default Route.extend({
   model() {
     return {
-      array1: [Ember.Object.create({
+      array1: [EmberObject.create({
         id: 1,
         label: 'yellow'
-      }), Ember.Object.create({
+      }), EmberObject.create({
         id: 2,
         label: 'green'
-      }), Ember.Object.create({
+      }), EmberObject.create({
         id: 12,
         label: 'red'
       })],
-      defaultValue: Ember.Object.create({id: 2, label: 'green'})
+      defaultValue: EmberObject.create({id: 2, label: 'green'})
     };
   }
 });
