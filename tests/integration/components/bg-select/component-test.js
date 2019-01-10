@@ -39,9 +39,9 @@ module('Integration | Component | bg-select', function (hooks) {
 
   test('check select has aria-labelledby', async function (assert) {
     await render(hbs`
-      {{bg-select aria-labelledby="label"}}
+      {{bg-select aria-label="select something"}}
     `);
 
-    assert.equal(this.$('select').attr('aria-labelledby'), 'label', 'should have aria-labelledby attribute');
+    assert.equal(this.$('select').attr('aria-label'), 'select something', 'should self label');
   });
 });
