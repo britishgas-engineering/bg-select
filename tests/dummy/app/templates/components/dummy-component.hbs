@@ -1,8 +1,8 @@
 <div>
   <h1>Example 1 working with objects</h1>
-  <p>
-    In this example the seed is:
-  </p>
+  <h2>
+    Seed (JS)
+  </h2>
 
   <pre>
     model = {
@@ -16,14 +16,13 @@
         id: 12,
         label: 'red'
       }],
+
       // just to make a twist it is Ember.Object
       defaultValue: Ember.Object.create({id: 12, label: 'red'})
     }
   </pre>
 
-  <div>
-    <h3>Handlebar (FYI: the value is the object)</h3>
-  </div>
+  <h2>Handlebar (FYI: the value is the object)</h2>
   <pre>
     &#123;&#123;#bg-select selected=model.defaultValue as |bg|}}
       &#123;&#123;#bg.option value=""}}Select one&#123;&#123;/bg.option}}
@@ -34,12 +33,14 @@
   </pre>
 </div>
 <div class="row">
+  <h2>Result</h2>
   <div class="col-xs-3">
-    {{#bg-select class="form-control" onSelectChange=(action 'onChangeHandler') tabindex=2 selected=model.defaultValue as |bg|}}
-    {{#bg.option value=""}}Select one{{/bg.option}}
-    {{#each model.array1 as |el|}}
-    {{#bg.option value=el}}{{el.label}}{{/bg.option}}
-    {{/each}}
+    <label class="sr-only" id="dropdown-label">Select a colour</label>
+    {{#bg-select class="form-control" onSelectChange=(action 'onChangeHandler') aria-labelledby="dropdown-label" tabindex=2 selected=model.defaultValue as |bg|}}
+      {{#bg.option value=""}}Select one{{/bg.option}}
+      {{#each model.array1 as |el|}}
+        {{#bg.option value=el}}{{el.label}}{{/bg.option}}
+      {{/each}}
     {{/bg-select}}
   </div>
   <div class="col-xs-3">
