@@ -7,7 +7,7 @@ module('Integration | Component | bg-select', function (hooks) {
   setupRenderingTest(hooks);
 
   test('changing "selected" value from outside', async function (assert) {
-    let values = [{
+    const values = [{
       label: 'label 1',
       aProp: 'abc'
     }, {
@@ -34,6 +34,14 @@ module('Integration | Component | bg-select', function (hooks) {
     this.set('selected', values[2]);
 
     assert.equal(this.$('option:selected').index(), 2, 'should select the required 3rd element');
-    assert.equal(this.$('select').attr('tabindex'), 3);
+    assert.equal(this.$('select').attr('tabindex'), 3, 'should have tabindex of 3');
+  });
+
+  test('check select has aria-labelledby', async function (assert) {
+    await render(hbs`
+      {{bg-select aria-labelledby="label"}}
+    `);
+
+    assert.equal(this.$('select').attr('aria-labelledby'), 'label', 'should have aria-labelledby attribute');
   });
 });
