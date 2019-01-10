@@ -7,7 +7,7 @@ module('Integration | Component | bg-select/bg-option', function (hooks) {
   setupRenderingTest(hooks);
 
   test('didInsertElement hook', async function (assert) {
-    let mockValue = 'apple';
+    const mockValue = 'apple';
     assert.expect(3);
 
     this.set('onRegisterHandler', (id, value) => {
