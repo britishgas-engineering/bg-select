@@ -1,12 +1,12 @@
-import { module, test } from 'qunit';
-import { setupRenderingTest } from 'ember-qunit';
-import { render } from '@ember/test-helpers';
+import {module, test} from 'qunit';
+import {setupRenderingTest} from 'ember-qunit';
+import {render} from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
-module('Integration | Component | bg-select', function(hooks) {
+module('Integration | Component | bg-select', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('changing "selected" value from outside', async function(assert) {
+  test('changing "selected" value from outside', async function (assert) {
     let values = [{
       label: 'label 1',
       aProp: 'abc'
@@ -33,8 +33,7 @@ module('Integration | Component | bg-select', function(hooks) {
 
     this.set('selected', values[2]);
 
-    assert.equal(this.$('option:selected').index(), 2, 'should select the required 3nd element');
+    assert.equal(this.$('option:selected').index(), 2, 'should select the required 3rd element');
     assert.equal(this.$('select').attr('tabindex'), 3);
-
   });
 });
