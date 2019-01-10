@@ -4,7 +4,7 @@ import layout from './template';
 export default Component.extend({
   tagName: 'select',
   selectedOptionId: null,
-  attributeBindings: ['disabled', 'tabindex'],
+  attributeBindings: ['aria-label', 'disabled', 'tabindex'],
   tabindex: null,
   init() {
     this._super();
